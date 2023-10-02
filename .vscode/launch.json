@@ -8,10 +8,10 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/10145159981/OneDrive - UDESC Universidade do Estado de Santa Catarina/EDA/Trabalho01_EDA_Pilhas/Trabalho01_EDA_Pilhas",
-      "program": "c:/Users/10145159981/OneDrive - UDESC Universidade do Estado de Santa Catarina/EDA/Trabalho01_EDA_Pilhas/Trabalho01_EDA_Pilhas/build/Debug/outDebug",
+      "cwd": "${workspaceFolder}",
+      "program": "${workspaceFolder}\\output\\Trabalho01_EDA_Pilhas.exe",
       "MIMode": "gdb",
-      "miDebuggerPath": "gdb",
+      "miDebuggerPath": "C:\\msys64\\mingw64\\bin\\gdb.exe",
       "setupCommands": [
         {
           "description": "Enable pretty-printing for gdb",
