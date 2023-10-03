@@ -6,10 +6,13 @@
 int main (){
     Matriz matrizOriginal, matrizModificada;
 	PilhaGenerica pilha;
-	int x, y, corNova;
+	Pixel pixelx, pixely;
+	int corNova;
 	int escolha = 0;
 
 	inicializa_pilha(&pilha, 100, sizeof(int));	
+	carrega_arquivo("matrizOriginal.txt", &matrizOriginal);
+	carrega_arquivo("matrizModificada.txt", &matrizModificada);
 	
 
 	while(escolha != 4){
@@ -18,24 +21,23 @@ int main (){
 		
 		switch(escolha){
 				case 1:{
-					carrega_arquivo("matrizOriginal.txt", &matrizOriginal);
 					mostra_matriz(matrizOriginal);
 					break;
 				}
 			
 				case 2:{
 					printf("Digite a coordenada x:");
-					scanf("%d", &x);
+					scanf("%d", &pixelx.x);
 			    	printf("Digite a coordenada y:");
-					scanf("%d", &y);
+					scanf("%d", &pixely.y);
 					printf("Digite a cor nova:");
 					scanf("%d", &corNova);
+					mostra_matriz(matrizOriginal);
 									
-					if (matrizOriginal.dados[x][y] != corNova){
-						printf("entrou no if");//não pinta nada então nem chega a entrar no if
-						matrizModificada.dados[x][y] = corNova;
+					if (matrizOriginal.dados[pixelx.x][pixely.y] != corNova){
+						matrizModificada.dados[pixelx.x][pixely.y] = corNova;
 						
-						empilha(&pilha, &matrizModificada.dados[x][y]);
+						empilha(&pilha, &matrizModificada.dados[pixelx.x][pixely.y]);
 						mostra_matriz(matrizModificada);
 						//pelo o que parece não está empilhando, não mostra nada
 					}

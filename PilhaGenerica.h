@@ -4,10 +4,16 @@
 
 typedef struct{
 	void **dados; // dados da PilhaGenerica (vetor de ponteiros void)
-	int topo;     // indica o índice do topo
+	int topo;     // indica o ï¿½ndice do topo
 	int capacidade; // capacidade do vetor
-	int tamInfo;    // tamanho (em bytes) da informação
+	int tamInfo;    // tamanho (em bytes) da informaï¿½ï¿½o
 } PilhaGenerica;
+
+typedef struct {
+	int x, y;
+}Pixel;
+
+
 
 void inicializa_pilha ( PilhaGenerica *p, int c, int t );
 int pilha_vazia ( PilhaGenerica p );

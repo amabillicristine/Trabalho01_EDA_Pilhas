@@ -29,7 +29,7 @@ void mostra_matriz( Matriz m ){
 int carrega_arquivo( char *nome_arquivo, Matriz *p ){
 	FILE *f = fopen( nome_arquivo, "rt" );
 	if( f == NULL)
-		return 0; // Retorna 0 caso não abra o arquivo
+		return 0; // Retorna 0 caso nï¿½o abra o arquivo
 	
 	int lin, col, i, j;
 	fscanf( f, "%d%d", &lin, &col );
